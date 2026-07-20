@@ -1,4 +1,4 @@
-# 🚀 Laboratorio: Administración de Servidores Linux con Ansible y Docker
+# Laboratorio: Administración de Servidores Linux con Ansible y Docker
 
 Este repositorio contiene la segunda práctica de automatización de infraestructura. 
 

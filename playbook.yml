@@ -1,0 +1,38 @@
+---
+- name: Laboratorio 2 - Servidores Docker
+  hosts: docker
+  gather_facts: yes
+  tasks:
+    - name: Mostrar el nombre del host
+      debug:
+        msg: "El nombre del servidor es: {{ inventory_hostname }}"
+
+    - name: Mostrar el sistema operativo
+      debug:
+        msg: "El sistema operativo es: {{ ansible_distribution }}"
+
+    - name: Crear el directorio /tmp/ansible-demo
+      file:
+        path: /tmp/ansible-demo
+        state: directory
+
+    - name: Crear archivo info.txt y escribir la informacion
+      copy:
+        dest: /tmp/ansible-demo/info.txt
+        content: |
+          Nombre del servidor: {{ inventory_hostname }}
+          Sistema Operativo: {{ ansible_distribution }}
+
+    - name: Crear mediante un loop los directorios logs, backup y config
+      file:
+        path: "/tmp/ansible-demo/{{ item }}"
+        state: directory
+      loop:
+        - logs
+        - backup
+        - config
+
+    - name: Mostrar un mensaje unicamente cuando el SO sea Ubuntu
+      debug:
+        msg: "Exito: Este servidor esta corriendo Ubuntu."
+      when: ansible_distribution == 'Ubuntu'

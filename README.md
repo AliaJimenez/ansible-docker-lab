@@ -7,17 +7,17 @@ Crear un laboratorio local con dos servidores Linux utilizando Docker (basados e
 
 ## 🐳 Comandos para iniciar los contenedores
 Para levantar la infraestructura de los dos servidores, asegúrate de tener Docker Desktop ejecutándose e ingresa el siguiente comando en la terminal:
-\`\`\`bash
+```bash
 docker compose up -d
-\`\`\`
+```
 
 *(Nota: Los contenedores requieren tener Python 3 instalado para que Ansible pueda ejecutar sus módulos correctamente).*
 
 ## 🤖 Comando para ejecutar el Playbook
 Para iniciar la automatización en ambos servidores, ejecuta el siguiente comando desde una terminal de Linux (WSL):
-\`\`\`bash
+```bash
 ANSIBLE_REMOTE_TMP=/tmp/ansible ansible-playbook -i inventory.ini playbook.yml
-\`\`\`
+```
 
 ## 📸 Captura de pantalla de la ejecución exitosa
 A continuación se muestra la evidencia de la ejecución del playbook donde se completan todas las tareas (lectura de host, creación de directorio temporal, escritura del archivo `info.txt` y creación del loop de carpetas) sin errores (`failed=0`):

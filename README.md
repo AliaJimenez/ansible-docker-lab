@@ -1,6 +1,8 @@
 # Laboratorio: Administración de Servidores Linux con Ansible y Docker
 
-Este repositorio contiene la segunda práctica de automatización de infraestructura. 
+**EN** — Ansible + Docker lab: two Ubuntu 24.04 containers managed centrally with Ansible over the `docker` connection plugin (no SSH). The playbook gathers system facts, creates directories with a loop, writes a report file and validates the OS with conditionals.
+
+**ES** — Este repositorio contiene la segunda práctica de automatización de infraestructura. 
 
 ## 🎯 Objetivo de la práctica
 Crear un laboratorio local con dos servidores Linux utilizando Docker (basados en la imagen de Ubuntu 24.04) y administrarlos de forma centralizada utilizando Ansible mediante una conexión directa (`ansible_connection=docker`). La automatización incluye la recolección de información del sistema, creación de directorios en bucle y validación de condiciones del sistema operativo.
@@ -25,4 +27,6 @@ A continuación se muestra la evidencia de la ejecución del playbook donde se c
 ![Ejecución exitosa del Playbook](playbookLINUX.png)
 
 ---
-*Desarrollado por Aliandy L. Jiménez Vicente.*
+## 👩‍💻 Author · Autora
+
+**Aliandy Jimenez** — [@AliaJimenez](https://github.com/AliaJimenez)
